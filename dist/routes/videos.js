@@ -1,0 +1,20 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const verifyToken_js_1 = require("../verifyToken.js");
+const video_js_1 = require("../controllers/video.js");
+const router = express_1.default.Router();
+router.post("/", verifyToken_js_1.verifyToken, video_js_1.addVideo);
+router.delete("/:id", verifyToken_js_1.verifyToken, video_js_1.deleteVideo);
+router.put("/:id", verifyToken_js_1.verifyToken, video_js_1.updateVideo);
+router.get("/find/:id", verifyToken_js_1.verifyToken, video_js_1.getVideo);
+router.put("/view/:id", video_js_1.addView);
+router.put("/view/:id", video_js_1.trend);
+router.get("/view/:id", video_js_1.random);
+router.get("/sub/:id", verifyToken_js_1.verifyToken, video_js_1.sub);
+router.get("/tags/:id", video_js_1.getByTag);
+router.get("/search/:id", video_js_1.search);
+exports.default = router;
