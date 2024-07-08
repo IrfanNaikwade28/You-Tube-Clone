@@ -4,4 +4,4 @@
 
 **Create .env file:**<br>
  > Add MongoDB Atlas Uri<br>
-    `MONGODB_URI=<your MongoDB Atlas connection URI>`
+    `MONGODB=<your MongoDB Atlas connection URI>`
