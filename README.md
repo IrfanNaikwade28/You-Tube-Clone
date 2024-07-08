@@ -3,5 +3,5 @@
 `npm i express axios bcrypt cookie-parser dotenv nodemon mongoose`
 
 **Create .env file:**<br>
- > Add MongoDB Atlas Uri
+ > Add MongoDB Atlas Uri<br>
     `MONGODB_URI=<your MongoDB Atlas connection URI>`
